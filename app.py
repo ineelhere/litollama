@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from ui_components import display_chat, display_generate, display_list, display_show, display_create, display_copy, display_delete, display_pull, display_push, display_embeddings
+from ui_components import display_generate, display_list, display_show, display_create, display_copy, display_delete, display_pull, display_push, display_embeddings
+from chatui import *
 
 with st.sidebar:
     st.title('LitOllama')
@@ -14,7 +15,7 @@ with st.sidebar:
 
 # Display selected feature
 if feature == "Chat":
-    display_chat()
+    main()
 elif feature == "Generate":
     display_generate()
 elif feature == "List":
