@@ -48,7 +48,7 @@ def display_delete():
 
 def display_pull():
     st.header("Pull")
-    model = st.selectbox("Model", [model['model'] for model in list_models()['models']])
+    model = st.text_input("Model", placeholder="gemma")
     if st.button("Pull Model"):
         pull_model(model)
         st.success(f"Model {model} pulled successfully.")
